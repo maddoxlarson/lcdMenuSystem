@@ -6,6 +6,6 @@ to use for VEX Robotics to create an LCD autonomous selector for the VEX V5 Brai
 All are welcome to look at what we have here in this repository and if you like what 
 you see, put in a pull request.
 
-- Maddox Larson,
-  Lead Programmer
-  3018v TPR Orange
+Maddox Larson,
+Lead Programmer
+3018v TPR Orange
