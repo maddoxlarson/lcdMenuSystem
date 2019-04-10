@@ -31,7 +31,6 @@ void lcdIcons(int folderX, int folderY, vex::color folderColor){
     Brain.Screen.drawLine(0+folderX, 18+folderY, 17+folderX, 18+folderY);
     Brain.Screen.drawLine(16+folderX, 18+folderY, 20+folderX, 14+folderY);
     Brain.Screen.drawLine(19+folderX, 14+folderY, 39+folderX, 14+folderY);
-
 }
 
 void lcdButtons(){
@@ -77,18 +76,20 @@ void lcdTouch(){
     screenPressed = true;
     lcdButtons();
 
-    if (Brain.Screen.yPosition() > 37 && Brain.Screen.yPosition() < 87){
+    if (yPos > 37 && yPos < 87){
      Brain.Screen.drawRectangle(60, 42, 411, 40, vex::color(2105893)); // Button 1
-    } else if (Brain.Screen.yPosition() > 87 && Brain.Screen.yPosition() < 137){
+    } else if (yPos > 87 && yPos < 137){
     Brain.Screen.drawRectangle(60, 92, 411, 40, vex::color(2105893)); // Button 2
-    } else if (Brain.Screen.yPosition() > 137 && Brain.Screen.yPosition() < 187){
+    } else if (yPos > 137 && yPos < 187){
     Brain.Screen.drawRectangle(60, 142, 411, 40, vex::color(2105893)); // Button 3
-    } else if (Brain.Screen.yPosition() > 187 && Brain.Screen.yPosition() < 237){
+    } else if (yPos > 187 && yPos < 237){
       Brain.Screen.drawRectangle(60, 192, 411, 40, vex::color(2105893)); // Button 4
-    } else if (Brain.Screen.xPosition() < 55 && Brain.Screen.yPosition() < 37){
+    } else if (xPos < 55 && yPos < 37){
       Brain.Screen.drawRectangle(0, 0, 50, 32, vex::color(2105893)); // Up
-    } else if (Brain.Screen.xPosition() > 403 && Brain.Screen.yPosition() < 37){
+    } else if (xPos > 403 && yPos < 37){
       Brain.Screen.drawRectangle(408, 0, 70, 32, vex::color(2105893)); // Home
+    } else {
+      //nothing . . .
     }
     lcdText();
   } else if (!Brain.Screen.pressing() && screenPressed) {
