@@ -16,6 +16,5 @@ int main() {
   while (1) {
     lcdTouch();
     Brain.Screen.render();
-    
   }
 }
