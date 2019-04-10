@@ -49,8 +49,9 @@ Page listOfPages[33] = {
 /* 31 */  {"3 flags, 1 cap", 31, true, "Back Red Non-Parking", "Bla bla bla"},  
 /* 32 */  {"5 flags, no cap", 32, true, "Back Red Non-Parking", "Bla bla bla"}
 };
-void testPrint(){
+
+void testPrint(int x, int y){
   for (int i = 0; i < 32; i++){
-    Brain.Screen.printAt( 120, 140, listOfPages[i].name);
+    Brain.Screen.printAt( 0, 0, listOfPages[i].name);
   }
 }
